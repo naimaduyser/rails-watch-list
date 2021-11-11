@@ -1,0 +1,13 @@
+
+  <% @movies.each do |movie| %>
+    <h2><%= movie.title %></h2>
+    <span><%= movie.year %> | </span>
+    <span><%= movie.director %> | </span>
+    <span><%= movie.genre %></span>
+    <br>
+    <%= image_tag("cards/movie_card.jpeg", height: '300px') %>
+    <br>
+    <p><%= movie.synopsis %></p>
+    <br>
+    <p><%= movie.list_id %></p>
+  <% end %>
