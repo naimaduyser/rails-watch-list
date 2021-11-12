@@ -3,7 +3,9 @@ class Movie < ApplicationRecord
 
   validates :title, presence: true, uniqueness: true
   validates :year, presence: true
+  validates :country, presence: true
   validates :director, presence: true
   validates :genre, presence: true
+  validates :poster_url, presence: true
   validates :synopsis, presence: true
 end

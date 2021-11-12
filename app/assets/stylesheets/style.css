@@ -1,0 +1,195 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lato:ital,wght@1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* h1, h2, h3, p, a {
+  text-decoration: none !important;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Banner */
+
+.banner {
+  background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.25) ), url("https://quinlan.it/upload/images/2018/04/hong-kong-express-1994-chungking-express-wong-kar-wai-recensione-cov932.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 45vh;
+  text-align: center;
+  padding-top: 15vh;
+}
+
+.banner h1, a, p {
+  color: white;
+}
+
+.banner h1 {
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 6px;
+}
+
+.banner a {
+  letter-spacing: 4px;
+  transition: all 0.2s ease;
+}
+
+.banner a:hover {
+  color: grey;
+  letter-spacing: 4.5px;
+}
+
+.links {
+  display: inline-flex;
+  width: 20%;
+  justify-content: space-between;
+}
+
+/* Add Button */
+
+.add-button {
+  padding: 8px 20px;
+  margin-right: 5vw;
+  margin-top: 3vh;
+  float: right;
+}
+
+.add-button a {
+  text-decoration: none;
+  color:black;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.add-button a:hover {
+  letter-spacing: 0.5px;
+  color: grey;
+}
+
+
+/* Movie Card */
+
+.cards-container {
+  width: 100%;
+  padding-bottom: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.cards-container img {
+  transition: all 0.5s ease;
+  width: auto;
+  height: 350px;
+}
+
+.cards-container img:hover {
+  filter: sepia(100%);
+}
+
+.movie-card {
+  line-height: 25px;
+  width: 30vw;
+  height: 60vh;
+  text-align: center;
+  border-radius: 10px;
+  padding: 40px;
+  margin-bottom: 25px;
+}
+
+.movie-card a, p {
+  color: black;
+  text-align: justify;
+}
+
+.movie-card a {
+  transition: all 0.2s ease;
+}
+
+.movie-card h2 {
+  margin-top: 4vh;
+}
+
+.movie-card a:hover {
+  color: lightgrey;
+}
+
+/* Show Single Movie */
+
+.movie {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  line-height: 25px;
+}
+
+.movie img {
+  height: 450px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.movie p {
+  margin-left: 20px;
+}
+
+.delete-view {
+  margin-bottom: 10vh;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.delete-view a {
+  color: black;
+  transition: all 0.2s ease;
+}
+
+.delete-view a:hover {
+  letter-spacing: 0.5px;
+  color: grey;
+}
+
+/* Forms */
+
+.form h2 {
+  margin-top: 8vh;
+  text-align: center;
+}
+
+.form {
+  padding-top: 8vh;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+/* Lists */
+
+
+.list-container {
+  padding-top: 500px;
+  width: 100%;
+  padding-bottom: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.center {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list-card {
+  width: 30vw;
+  height: 60vh;
+  text-align: center;
+  border-radius: 10px;
+}

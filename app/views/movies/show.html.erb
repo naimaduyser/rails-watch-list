@@ -1,18 +1,33 @@
-<h2><%= @movie.title %></h2>
-<span><%= @movie.year %> | </span>
-<span><%= @movie.director %> | </span>
-<span><%= @movie.genre %></span>
-<br>
-<%= image_tag("cards/movie_card.jpeg", height: '300px') %>
-<br>
-<p><%= @movie.synopsis %></p>
-<br>
-<p><%= @movie.list_id %></p>
+<div class="banner">
+  <h1>Naima's Film Collection</h1>
+  <br>
+  <div class="links">
+    <p><%= link_to 'Your Movies', movies_path %></p>
+    <p><%= link_to 'Your Lists', lists_path  %></p>
+  </div>
+</div>
 
-<span>
-<%= link_to 'Delete Movie',
-movie_path(@movie),
-method: :delete,
-data: { confirm: "Are you sure you want to delete #{@movie.title}?"} %>
- | </span>
-<span><%= link_to 'View All Movies', movies_path %></span>
+<div class="movie">
+  <h2><%= @movie.title %></h2>
+  <span><%= @movie.year %> | </span>
+  <span><%= @movie.director %> | </span>
+  <span><%= @movie.country %> | </span>
+  <span><%= @movie.genre %></span>
+  <br>
+  <br>
+  <br>
+  <img><%= image_tag(@movie.poster_url, :alt => "movie poster") %>
+  <br>
+  <br>
+  <br>
+  <p><%= @movie.synopsis %></p>
+</div>
+
+<div class="delete-view">
+  <span><%= link_to 'View All Movies', movies_path %></span>
+  <%= link_to 'Delete Movie',
+  movie_path(@movie),
+  method: :delete,
+  data: { confirm: "Are you sure you want to delete #{@movie.title}?"} %>
+  </span>
+</div>

@@ -1,18 +1,26 @@
-<h1>Naima's Film Collection</h1>
-<span><%= link_to 'Your Movies', movies_path %> | </span>
-<span><%= link_to 'Your Lists', lists_path  %></span>
-<br>
-<%= link_to 'Add A Movie', movies_new_path %>
+<div class="banner">
+  <h1>Naima's Film Collection</h1>
+  <br>
+  <div class="links">
+    <p><%= link_to 'Your Movies', movies_path %></p>
+    <p><%= link_to 'Your Lists', lists_path  %></p>
+  </div>
+</div>
 
+<div class="add-button">
+<%= link_to '+ Add A Movie', movies_new_path %>
+</div>
+
+<div class="cards-container">
   <% @movies.each do |movie| %>
-    <h2><%= link_to movie.title, movie_path(movie) %></h2>
+  <div class="movie-card">
+    <img><%= link_to image_tag(movie.poster_url, :alt => "movie poster"), movie_path(movie)%>
+    <h2><%= movie.title %></h2>
     <span><%= movie.year %> | </span>
     <span><%= movie.director %> | </span>
+    <span><%= movie.country %> | </span>
     <span><%= movie.genre %></span>
     <br>
-    <%= image_tag("cards/movie_card.jpeg", height: '300px') %>
-    <br>
-    <p><%= movie.synopsis %></p>
-    <br>
-    <p><%= movie.list_id %></p>
+    </div>
   <% end %>
+</div>

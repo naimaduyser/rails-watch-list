@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   # See details about one movie
   get 'movies/:id', to: 'movies#show', as: 'movie'
 
+  # Edit a movie
+  get 'movies/:id/edit', to: 'movies#edit', as: 'edit'
+  patch 'movies/:id', to: 'movies#update'
+
   # Delete a movie
   delete 'movies/:id', to: 'movies#destroy'
 
