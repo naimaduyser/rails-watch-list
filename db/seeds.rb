@@ -15,6 +15,12 @@ require 'faker'
     director: Faker::Name.name,
     synopsis: "Here is some placeholder text. We're not exactly sure what this movie is about because this is all fake data. However, once this application is up and running you will be able to see the real synopsis of real movies!",
     genre: Faker::Book.genre,
-    poster_url: 'https://images.unsplash.com/photo-1580130544346-77d05d03d742?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&q=80'
+  )
+end
+
+
+5.times do
+  List.create(
+    name: Faker::Movie.title
   )
 end

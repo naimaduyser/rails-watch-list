@@ -1,0 +1,18 @@
+<h2><%= @movie.title %></h2>
+<span><%= @movie.year %> | </span>
+<span><%= @movie.director %> | </span>
+<span><%= @movie.genre %></span>
+<br>
+<%= image_tag("cards/movie_card.jpeg", height: '300px') %>
+<br>
+<p><%= @movie.synopsis %></p>
+<br>
+<p><%= @movie.list_id %></p>
+
+<span>
+<%= link_to 'Delete Movie',
+movie_path(@movie),
+method: :delete,
+data: { confirm: "Are you sure you want to delete #{@movie.title}?"} %>
+ | </span>
+<span><%= link_to 'View All Movies', movies_path %></span>

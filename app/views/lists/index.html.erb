@@ -1,0 +1,9 @@
+<h1>Naima's Lists</h1>
+<span><%= link_to 'Your Movies', movies_path %> | </span>
+<span><%= link_to 'Your Lists', lists_path  %></span>
+<br>
+<%= link_to 'Add A List', lists_new_path %>
+
+  <% @lists.each do |list| %>
+    <h2><%= link_to list.name, list_path(list) %></h2>
+  <% end %>
