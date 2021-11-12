@@ -5,6 +5,7 @@
 * h1, h2, h3, p, a {
   text-decoration: none !important;
   font-family: 'Montserrat', sans-serif;
+  text-align: center !important;
 }
 
 /* Banner */
@@ -192,4 +193,8 @@
   height: 60vh;
   text-align: center;
   border-radius: 10px;
+}
+
+.add-h2 {
+  margin-top: 5vh;
 }
