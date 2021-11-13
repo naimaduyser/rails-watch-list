@@ -82,10 +82,11 @@
   transition: all 0.5s ease;
   width: auto;
   height: 350px;
+  filter: saturate(20%)
 }
 
 .cards-container img:hover {
-  filter: sepia(100%);
+  filter: saturate(150%);
 }
 
 .movie-card {
