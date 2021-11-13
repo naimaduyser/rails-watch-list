@@ -11,12 +11,11 @@
 <%= link_to '+ Add A List', lists_new_path %>
 </div>
 
-<div class="cards-container">
+
   <% @lists.each do |list| %>
-  <div class="list-card">
-    <img><%= link_to image_tag(list.photo, :alt => "list poster"), list_path(list) %>
-    <h2 class="center"><%= list.name %></h2>
-    <br>
-    </div>
+    <div><%=  %></div>
+    <h2><%= list.name %></h2>
+    <p><%= list.description %></p>
+    <img><%= image_tag(list.photo) %>
+    <img><%= link_to image_tag(list.photo, :alt => "list poster"), list_path(list)%>
   <% end %>
-</div>
