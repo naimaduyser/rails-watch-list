@@ -16,6 +16,5 @@
     <div><%=  %></div>
     <h2><%= list.name %></h2>
     <p><%= list.description %></p>
-    <img><%= image_tag(list.photo) %>
     <img><%= link_to image_tag(list.photo, :alt => "list poster"), list_path(list)%>
   <% end %>
