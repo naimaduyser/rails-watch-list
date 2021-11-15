@@ -2,7 +2,7 @@
   <h1>Naima's Film Collection</h1>
   <br>
   <div class="links">
-    <p><%= link_to 'Movies', movies_path %></p>
+    <p><%= link_to 'Your Movies', movies_path %></p>
     <p><%= link_to 'Your Lists', lists_path  %></p>
   </div>
 </div>
@@ -13,7 +13,7 @@
 
 <div class="cards-container">
   <% @movies.each do |movie| %>
-  <div class="movie-card">
+  <div class="element-card">
     <img><%= link_to image_tag(movie.poster_url, :alt => "movie poster"), movie_path(movie)%>
     <h2><%= movie.title %></h2>
     <span><%= movie.year %> | </span>

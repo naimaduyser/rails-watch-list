@@ -12,9 +12,12 @@
 </div>
 
 
+<div class="cards-container">
   <% @lists.each do |list| %>
-    <div><%=  %></div>
+  <div class="element-card">
+    <img id="list-photo"><%= link_to image_tag(list.photo, :alt => "list poster"), list_path(list)%>
     <h2><%= list.name %></h2>
-    <p><%= list.description %></p>
-    <img><%= link_to image_tag(list.photo, :alt => "list poster"), list_path(list)%>
+    <br>
+    </div>
   <% end %>
+</div>

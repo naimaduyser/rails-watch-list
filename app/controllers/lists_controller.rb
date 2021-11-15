@@ -6,6 +6,8 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @bookmarks = @list.bookmarks
+    @bookmark = Bookmark.new
   end
 
   def new
@@ -20,10 +22,12 @@ class ListsController < ApplicationController
 
   def destroy
     @list = List.find(params[:id])
-    @list.delete
-    # Ask why the hell ^ this needs .delete but movies needs .destroy
-    # What the hell Ruby
-    redirect_to lists_path
+    if @list.bookmarks.empty?
+      @list.destroy
+      redirect_to lists_path
+    else
+      redirect_to list_path(@list)
+    end
   end
 
   private

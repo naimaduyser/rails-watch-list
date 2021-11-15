@@ -8,4 +8,8 @@ class Movie < ApplicationRecord
   validates :genre, presence: true
   validates :poster_url, presence: true
   validates :synopsis, presence: true
+
+  before_destroy do
+    destroy unless bookmarks.empty?
+  end
 end

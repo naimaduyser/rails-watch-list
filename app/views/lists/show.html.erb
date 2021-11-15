@@ -12,6 +12,24 @@
 <p><%= @list.description %></p>
 </div>
 
+<% @list.bookmarks.each do |bm| %>
+<h2><%= bm.movie.title %></h2>
+<p><%= bm.movie.description %></p>
+<span><%= bm.movie.year %> | </span>
+<span><%= bm.movie.director %> | </span>
+<span><%= bm.movie.country %> | </span>
+<span><%= bm.movie.genre %></span>
+<img><%= image_tag(@movie.poster_url, :alt => "movie poster") %>
+<p><%= bm.comment %></p>
+<% end %>
+
+<%= form_for(@list, @bookmark) do |f| %>
+  <%= f.association :movie %>
+  <br>
+  <%= f.input :comment, :size => "50"%>
+  <%= f.submit %>
+<% end %>
+
 <div class="delete-view">
 <span>
 <%= link_to 'Delete List',

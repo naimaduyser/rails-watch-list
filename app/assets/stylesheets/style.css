@@ -5,7 +5,6 @@
 * h1, h2, h3, p, a {
   text-decoration: none !important;
   font-family: 'Montserrat', sans-serif;
-  text-align: center !important;
 }
 
 /* Banner */
@@ -67,7 +66,7 @@
 }
 
 
-/* Movie Card */
+/* Movie/List Card */
 
 .cards-container {
   width: 100%;
@@ -89,7 +88,7 @@
   filter: saturate(150%);
 }
 
-.movie-card {
+.element-card {
   line-height: 25px;
   width: 30vw;
   height: 60vh;
@@ -99,22 +98,14 @@
   margin-bottom: 25px;
 }
 
-.movie-card a, p {
+a.element-card, p {
   color: black;
-  text-align: justify;
 }
 
-.movie-card a {
-  transition: all 0.2s ease;
-}
-
-.movie-card h2 {
+.element-card h2 {
   margin-top: 4vh;
 }
 
-.movie-card a:hover {
-  color: lightgrey;
-}
 
 /* Show Single Movie */
 
@@ -135,6 +126,7 @@
 
 .movie p {
   margin-left: 20px;
+  text-align: justify;
 }
 
 .delete-view {
@@ -154,6 +146,13 @@
   color: grey;
 }
 
+/* Add A Movie */
+
+.add-h2 {
+  margin-top: 5vh;
+  text-align: center;
+}
+
 /* Forms */
 
 .form h2 {
@@ -169,36 +168,7 @@
   margin-bottom: 10vh;
 }
 
-/* Lists */
 
-
-.list-container {
-  padding-top: 500px;
-  width: 100%;
-  padding-bottom: 8vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-.center {
-  position: absolute;
-  top: 62%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.list-card {
-  width: 30vw;
-  height: 60vh;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.add-h2 {
-  margin-top: 5vh;
-}
 
 /* View List */
 
